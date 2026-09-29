@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music Playlist Manager</title>
+</head>
+
+<body>
+
+    <h1>🎵 Music Playlist Manager</h1>
+
+    <h2>Add a Song</h2>
+
+    <form action="/add" method="POST">
+        <input type="text" name="title" placeholder="Song Name" required>
+        <input type="text" name="artist" placeholder="Artist Name" required>
+        <button type="submit">Add Song</button>
+    </form>
+
+    <h2>My Playlist</h2>
+
+    {% for song in songs %}
+        <p>🎵 {{ song.title }} - {{ song.artist }}</p>
+    {% endfor %}
+
+</body>
+</html>
